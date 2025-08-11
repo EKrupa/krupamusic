@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'djangomusic',
         'USER': 'admin',
-        'PASSWORD': 'Newday1010#2',
+        'PASSWORD': '',
         'HOST':'localhost',
         'PORT': ''
         
