@@ -1,11 +1,228 @@
+/* --- Album Title Styles --- */
+.album-title {
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.4rem;
+    color: #232946;
+    margin-bottom: 0.7rem;
+    margin-top: 0.7rem;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+/* --- Album Cover Styles --- */
+.album-cover-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.album-cover-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px #23294633;
+    border: 4px solid #e07a5f;
+    background: #e9eaed;
+    transition: transform 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+.album-cover-img:hover {
+    transform: scale(1.04) rotate(-2deg);
+}
+/* --- Navbar Styles --- */
+.navbar {
+    width: 100%;
+    background: rgba(35, 41, 70, 0.98);
+    box-shadow: 0 2px 12px #23294622;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+}
+.navbar-logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    color: #a8dadc;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li a {
+    color: #f7f7f7;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: color 0.2s;
+}
+.navbar-links li a:hover {
+    color: #e07a5f;
+}
+
+/* --- Summary Section --- */
+.summary-section {
+    margin: 2.5rem auto 2rem auto;
+    background: rgba(255,255,255,0.92);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 12px #23294622;
+    padding: 2.5rem 1.2rem 1.5rem 1.2rem;
+    max-width: 650px;
+    text-align: center;
+}
+.summary-title {
+    margin-top: 0;
+    color: #232946;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-shadow: 0 2px 12px #a8dadc33;
+}
+.summary-text {
+    color: #3d405b;
+    font-size: 1.18rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    background: rgba(168,218,220,0.12);
+    border-radius: 0.7rem;
+    padding: 0.7rem 1.2rem;
+    box-shadow: 0 2px 8px #23294611;
+}
+.image-div img {
+    width: 420px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 32px;
+    box-shadow: 0 6px 32px #23294633;
+    border: 4px solid #a8dadc;
+    background: #e9eaed;
+    transition: transform 0.3s;
+}
+.image-div img:hover {
+    transform: scale(1.04) rotate(-2deg);
+}
+
+/* --- Music Section --- */
+.music-section {
+    margin: 2.5rem auto 0 auto;
+    background: rgba(168, 218, 220, 0.92);
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 16px #23294622;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    max-width: 800px;
+}
+.music-section h2 {
+    margin-top: 0;
+    color: #232946;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+}
+.track-list li {
+    margin: 1.2rem 0;
+    padding: 1.2rem 1rem;
+    background: linear-gradient(90deg, #eaf0fa 0%, #a8dadc 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px #23294622;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.track-list li:hover {
+    box-shadow: 0 6px 24px #23294644;
+    transform: translateY(-2px) scale(1.01);
+}
+.track-title {
+    font-weight: 600;
+    color: #232946;
+    font-size: 1.1rem;
+}
+.audio-player {
+    width: 200px;
+    border-radius: 8px;
+    background: #eaf0fa;
+    box-shadow: 0 1px 4px #23294622;
+}
+
+/* --- Social Links --- */
+.social-links {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+.social-links a {
+    color: #232946;
+    margin: 0 1.2rem;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+.social-links a:hover {
+    color: #e07a5f;
+    transform: scale(1.18) rotate(-8deg);
+}
+
+/* --- Footer --- */
+.footer {
+    width: 100%;
+    background: rgba(35, 41, 70, 0.98);
+    color: #a8dadc;
+    text-align: center;
+    padding: 1.2rem 0 1rem 0;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin-top: 3rem;
+    letter-spacing: 0.5px;
+}
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap');
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background:url("../guitarpic.jpeg") center center/cover no-repeat fixed;
+            background: linear-gradient(135deg, #232946 0%, #3d405b 50%, #a8dadc 100%);
             color: #f7f7f7;
             margin: 0;
             padding: 0;
             min-height: 100vh;
+            position: relative;
+            /* Subtle pattern overlay using SVG data URI */
+            background-image: linear-gradient(135deg, #232946 0%, #3d405b 50%, #a8dadc 100%), url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="none"/><circle cx="20" cy="20" r="1.5" fill="%23e07a5f" fill-opacity="0.12"/></svg>');
+            background-size: cover, 120px 120px;
+            background-repeat: no-repeat, repeat;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(168, 218, 220, 0.35); /* transparent a8dadc */
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container, header, .music-section, .image-div, .social-links {
+            position: relative;
+            z-index: 1;
         }
         .container {
             max-width: 900px;

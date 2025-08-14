@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h2>Albums</h2>
+        <section class="album">
+            <h3 class="album-title">Be Happy</h3>
+            <div class="album-cover-div">
+                <img src="{% static 'phonto.JPG' %}" alt="Album Cover" class="album-cover-img">
+            </div>
+            <p class="album-description">Release coming soon!.</p>
+        </section>
+        <section class="album">
+            <h3 class="album-title">Where to Next?</h3>
+            <div class="album-cover-div">
+                <img src="{% static 'wheretonext.jpeg' %}" alt="Album Cover" class="album-cover-img">
+            </div>
+            <div class="album-links" style="display: flex; justify-content: center; gap: 1rem; margin: 1rem 0;">
+                <a href="https://music.apple.com/us/album/where-to-next-ep/1440991831" target="_blank" rel="noopener noreferrer" class="album-btn" style="background:#fa243c;color:#fff;padding:0.5rem 1.2rem;border-radius:0.7rem;text-decoration:none;font-weight:600;box-shadow:0 2px 8px #23294622;transition:background 0.2s;">iTunes</a>
+                <a href="https://open.spotify.com/artist/7pQRNcJhvobJgONTDB3iHv?si=zitwHPHPTY6rVn6oY-amwA" target="_blank" rel="noopener noreferrer" class="album-btn" style="background:#1db954;color:#fff;padding:0.5rem 1.2rem;border-radius:0.7rem;text-decoration:none;font-weight:600;box-shadow:0 2px 8px #23294622;transition:background 0.2s;">Spotify</a>
+            </div>
+            <p class="album-description">Released in 2018, this debut album features Evan Krupa's unique blend of jazz, blues, soul music.</p>
+        </section>
+    {% endblock %}

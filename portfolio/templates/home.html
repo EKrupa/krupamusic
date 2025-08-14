@@ -4,19 +4,25 @@
 {% block content %}
 
 <body>
+    {% if messages %}
+  {% for message in messages %}
+    <div class="alert">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+    
     <div class="container">
-        <header>
-            <h1>Evan Krupa</h1>
-            <p>Welcome to my music homepage! Listen to my latest tracks and connect with me.</p>
-        </header>
-        <section class="summary-section" style="margin: 2rem auto 1.5rem auto; background: #3d5a80; border-radius: 1.2rem; box-shadow: 0 2px 8px #a8dadc; padding: 2.5rem 1.2rem 1.5rem 1.2rem; max-width: 600px; text-align:center;">
-            <div class="image-div" style="display:flex; justify-content:center; align-items:center; margin-bottom:1.5rem;">
-                <img src="{% static 'meguitar.jpeg' %}" alt="Profile Image" style="width: 420px; height: 300px; object-fit: cover; border-radius: 32px; box-shadow: 0 6px 32px #23294633; border: 2px solid #232946; background: #a8dadc; transition: transform 0.3s;">
+        <section class="summary-section">
+            <div class="image-div">
+                <img src="{% static 'fivespot.jpeg' %}" alt="Profile Image">
             </div>
-            <h2 style="margin-top:0; color:#fff; font-family:'Montserrat', Arial, sans-serif; font-size:1.3rem;">New Album Coming Soon!</h2>
-            <p style="color:#eaf0fa; font-size:1.08rem; margin-bottom:0;">I am a passionate musician and composer, sharing my latest tracks and musical journey.</p>
+            <h2 class="summary-title">Evan Krupa</h2>
+            <p class="summary-text">Guitarist, Keyboardist, Producer, and Composer.</p>
         </section>
-        <section class="music-section">
+        <section class="music-section" id="music">
+            <h3 class="album-title"> New Album 'Be Happy' Coming Soon!</h3>
+            <div class="album-cover-div">
+                <img src="{% static 'phonto.JPG' %}" alt="Album Cover" class="album-cover-img">
+            </div>
             <h2>Latest Tracks</h2>
             <ul class="track-list">
                 <li>
@@ -33,22 +39,23 @@
                         Your browser does not support the audio element.
                     </audio>
                 </li>
-                 <li>
+                <li>
                     <span class="track-title">Come Alive</span>
                     <audio class="audio-player" controls>
                         <source src="{% static 'audio/backagain.mp3' %}" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </li>
-                <!-- Add more tracks as needed -->
             </ul>
         </section>
         <div class="social-links">
-            <a href="https://soundcloud.com/" target="_blank" title="SoundCloud">🎵</a>
+          <!--  <a href="https://soundcloud.com/" target="_blank" title="SoundCloud">🎵</a>
             <a href="https://spotify.com/" target="_blank" title="Spotify">🟢</a>
-            <a href="mailto:your@email.com" title="Email">✉️</a>
-            <!-- Add more social links as needed -->
+            <a href="mailto:your@email.com" title="Email">✉️</a> -->
         </div>
     </div>
-</html>
+    <footer class="footer">
+        <div class="footer-content">&copy; {{ year|default:2025 }} Evan Krupa. All rights reserved.</div>
+    </footer>
+</body>
 {% endblock %}
