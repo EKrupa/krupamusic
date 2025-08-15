@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import environ 
+import environ
+
 
 # Initialize environment variables
 env = environ.Env()
@@ -29,9 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-98sg_7aok=n)7u*i1*-m*uv)euu#$2-$c-5dd(1d#86eq1b=j)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.175.242.28', 'localhost', 'evankrupa.com']
 
 
 # Application definition
@@ -85,12 +86,22 @@ WSGI_APPLICATION = 'krupamusic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+<<<<<<< HEAD
         'NAME': 'djangomusic',
         'USER': 'admin',
         'PASSWORD': '',
         'HOST':'localhost',
         'PORT': ''
         
+=======
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST':env('DB_HOST'),
+        'PORT': env('DB_PORT')
+
+
+>>>>>>> 735e187397916b6aa66f22c8c1d7c23b912a2c4f
     }
 }
 
