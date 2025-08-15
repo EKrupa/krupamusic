@@ -86,22 +86,12 @@ WSGI_APPLICATION = 'krupamusic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-<<<<<<< HEAD
-        'NAME': 'djangomusic',
-        'USER': 'admin',
-        'PASSWORD': '',
-        'HOST':'localhost',
-        'PORT': ''
-        
-=======
-        'NAME': env('DB_NAME'),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
-        'HOST':env('DB_HOST'),
-        'PORT': env('DB_PORT')
+        'NAME': 'DB_NAME',
+        'USER': 'DB_USER',
+        'PASSWORD': 'DB_PASSWORD',
+        'HOST':'DB_HOST',
+        'PORT': 'DB_PORT'
 
-
->>>>>>> 735e187397916b6aa66f22c8c1d7c23b912a2c4f
     }
 }
 
