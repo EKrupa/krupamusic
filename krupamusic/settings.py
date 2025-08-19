@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': 'djangomusic',
         'USER':os.environ.get('DB_USER'),
         'PASSWORD':os.environ.get('DB_PASSWORD'),
-        'HOST':os.environ.get('DB_HOST'),
+        'HOST': 'localhost',
         'PORT':''
 
     }
