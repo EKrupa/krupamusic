@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-98sg_7aok=n)7u*i1*-m*uv)euu#$2-$c-5dd(1d#86eq1b=j)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['23.21.11.136', 'localhost', 'evankrupa.com']
+ALLOWED_HOSTS = ['98.86.73.38' 'localhost', 'evankrupa.com']
 
 
 # Application definition
@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'krupamusic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':os.environ.get('DB_NAME'),
+        'NAME': 'djangomusic',
         'USER':os.environ.get('DB_USER'),
         'PASSWORD':os.environ.get('DB_PASSWORD'),
-        'HOST':os.environ.get('DB_HOST'),
+        'HOST': 'localhost',
         'PORT':''
 
     }
@@ -136,8 +136,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-import os
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
