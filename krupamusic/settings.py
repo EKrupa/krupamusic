@@ -37,7 +37,7 @@ SECRET_KEY = 'django-insecure-98sg_7aok=n)7u*i1*-m*uv)euu#$2-$c-5dd(1d#86eq1b=j)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['98.86.73.38' 'localhost', 'evankrupa.com']
+ALLOWED_HOSTS = ['52.44.161.76' 'localhost', 'evankrupa.com']
 
 
 # Application definition
@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'krupamusic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangomusic',
+        'NAME': os.environ.get('DB_NAME'),
         'USER':os.environ.get('DB_USER'),
         'PASSWORD':os.environ.get('DB_PASSWORD'),
-        'HOST': 'localhost',
+        'HOST': os.environ.get('DB_HOST'),
         'PORT':''
 
     }
