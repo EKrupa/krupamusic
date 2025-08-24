@@ -2,8 +2,19 @@
 {% load static %}
 
 {% block content %}
-
-
+<body>
+    {% if messages %}
+  {% for message in messages %}
+    <div class="alert">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+    
+    <div class="container">
+        <section class="summary-section">
+            <div class="image-div">
+                <img src="{% static 'fivespot.jpeg' %}" alt="Profile Image">
+            </div>
+        </body>
    
 
 
