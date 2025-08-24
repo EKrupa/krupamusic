@@ -20,12 +20,14 @@ env = environ.Env()
 environ.Env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,7 +39,7 @@ SECRET_KEY = 'django-insecure-98sg_7aok=n)7u*i1*-m*uv)euu#$2-$c-5dd(1d#86eq1b=j)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['52.44.161.76', 'localhost', 'evankrupa.com']
+ALLOWED_HOSTS = ['52.44.161.76', 'localhost', 'www.evankrupa.com']
 
 
 # Application definition
@@ -135,8 +137,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 # Default primary key field type
