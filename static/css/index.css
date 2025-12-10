@@ -106,7 +106,7 @@
 
 body {
     
-    background-image: url('BWBR.jpeg');
+    background-image: url(BWBR.jpeg);
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
