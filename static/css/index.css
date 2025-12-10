@@ -18,7 +18,7 @@
 
 body {
     
-    background-image: url('{% static "images/background.png" %}');
+    background-image: url('{% static "BWBR.jpeg" %}');
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
