@@ -91,13 +91,10 @@ main {
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: 2.5px;
-    color: #232946;
+    color: #fff;
     margin-bottom: 0.3rem;
-    background: linear-gradient(90deg, #e07a5f 0%, #64cdf0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 2px 12px rgba(35,41,70,0.08);
+    background: none;
+    text-shadow: 0 2px 16px rgba(35,41,70,0.45), 0 1px 0 #232946;
     position: relative;
     left: 0;
     top: 0;
