@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
-<body>
-   
     <div class="container">
-        <h2>Contact Me</h2>
-        <form method="post" action="">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+        <div class="contact-card">
+            <h2>Contact Me</h2>
+            <p class="lead">Have a question, booking request, or comment? Send a message and I'll get back to you soon.</p>
+            <form method="post" action="" class="contact-form">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {{ form.as_p }}
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-contact">Send Message</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-
 {% endblock %}

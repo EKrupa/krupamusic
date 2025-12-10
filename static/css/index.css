@@ -1,4 +1,201 @@
-/* --- Album Title Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* --- New --- */
+/* Reset some styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #cccccc;
+    text-decoration: none;
+    
+
+}
+
+body {
+    
+    background-image: url(BWBR.jpeg);
+    background-color: #64cdf0;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    background-size: 85% 110%;
+    
+    /* layout for sticky footer behavior */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align:justify;
+    margin-bottom:-150px;
+    margin-top: 240px;
+    
+   
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+
+/* Ensure main expands to push footer to bottom when content is short */
+main {
+    flex: 1 1 auto;
+}
+
+/* If you want footer pinned to viewport bottom (always visible), uncomment:
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+*/
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+   
+
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 250px;
+    font-size: large;
+
+}
+
+.navbar-links :hover {
+    text-decoration: underline;
+    color: #d96645;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.title img {
+.title h1.hero-title {
+    font-family: 'Raleway', 'Quicksand', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #232946;
+    margin-bottom: 0.3rem;
+    background: linear-gradient(90deg, #e07a5f 0%, #64cdf0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 12px rgba(35,41,70,0.08);
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.mepic img {
+    font-family: 'Nunito', 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #4f5d75;
+    margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(35,41,70,0.06);
+}
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+    position: relative; 
+}   
+
+
+.title h1 {
+    letter-spacing: 4px;
+    font-size: 60px;
+
+   
+    
+}
+.title p {
+    font-size: 24px;
+    margin-top: -10px;
+    letter-spacing: 6px;
+    font-weight: 400;
+    top: 100px;
+    
+    
+}
+
+
+.audio-section {
+    /* Lighter, slightly translucent card for audio controls */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 560px;
+    margin: 0 auto 32px auto;
+    margin-top: 500px;
+    padding: 0.9rem 1.2rem;
+    background: linear-gradient(180deg, rgba(232,238,246,0.85), rgba(232,238,246,0.78));
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(35,41,70,0.12);
+    border: 1px solid rgba(35,41,70,0.06);
+    color: #232946;
+    backdrop-filter: blur(6px);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+}
+
+.audio-section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(35,41,70,0.16);
+}
+
+.audio-section .audio-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    color: #d96645;
+    letter-spacing: 0.6px;
+    font-size: 1rem;
+}
+
+/* Album cover and header layout inside audio card */
+.audio-header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    width: 100%;
+}
+.audio-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(35,41,70,0.12);
+    border: 2px solid rgba(35,41,70,0.06);
+}
+.audio-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Album Page */
 .album-title {
     text-align: center;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -30,314 +227,354 @@
 .album-cover-img:hover {
     transform: scale(1.04) rotate(-2deg);
 }
-/* --- Navbar Styles --- */
-.navbar {
+
+/* Modern album grid and cards */
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    align-items: start;
+    
+   
+   
+}
+.album {
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 28px rgba(35,41,70,0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.album:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 44px rgba(35,41,70,0.12);
+}
+.album-title {
+    font-size: 1.25rem;
+    color: #232946;
+    margin: 0.4rem 0 0.6rem 0;
+}
+.album-description {
+    color: #4f5d75;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-top: 0.8rem;
+}
+.album-cover-div {
     width: 100%;
-    background: rgba(35, 41, 70, 0.98);
-    box-shadow: 0 2px 12px #23294622;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-.navbar-container {
-    max-width: 1100px;
-    margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7rem 2rem;
+    justify-content: center;
 }
-.navbar-logo {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 2rem;
-    color: #a8dadc;
-    font-weight: 700;
-    letter-spacing: 1px;
+.album-cover-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(35,41,70,0.08);
 }
-.navbar-links {
-    list-style: none;
+.album-links {
     display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+    gap: 0.75rem;
+    margin-top: 0.8rem;
+    justify-content: center;
 }
-.navbar-links li a {
-    color: #f7f7f7;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-family: 'Montserrat', Arial, sans-serif;
-    transition: color 0.2s;
-}
-.navbar-links li a:hover {
-    color: #e07a5f;
-}
-
-/* --- Summary Section --- */
-.summary-section {
-    margin: 2.5rem auto 2rem auto;
-    background: rgba(255,255,255,0.92);
-    border-radius: 1.2rem;
-    box-shadow: 0 2px 12px #23294622;
-    padding: 2.5rem 1.2rem 1.5rem 1.2rem;
-    max-width: 650px;
-    text-align: center;
-}
-.summary-title {
-    margin-top: 0;
-    color: #232946;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    text-shadow: 0 2px 12px #a8dadc33;
-}
-.summary-text {
-    color: #3d405b;
-    font-size: 1.18rem;
-    font-family: 'Roboto', Arial, sans-serif;
-    margin-bottom: 0;
-    text-align: center;
-    line-height: 1.7;
-    letter-spacing: 0.2px;
-    background: rgba(168,218,220,0.12);
-    border-radius: 0.7rem;
-    padding: 0.7rem 1.2rem;
-    box-shadow: 0 2px 8px #23294611;
-}
-.image-div img {
-    width: 420px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 32px;
-    box-shadow: 0 6px 32px #23294633;
-    border: 4px solid #a8dadc;
-    background: #e9eaed;
-    transition: transform 0.3s;
-}
-.image-div img:hover {
-    transform: scale(1.04) rotate(-2deg);
-}
-
-/* --- Music Section --- */
-.music-section {
-    margin: 2.5rem auto 0 auto;
-    background: rgba(168, 218, 220, 0.92);
-    border-radius: 1.5rem;
-    box-shadow: 0 2px 16px #23294622;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    max-width: 800px;
-}
-.music-section h2 {
-    margin-top: 0;
-    color: #232946;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 0.5px;
-}
-.track-list li {
-    margin: 1.2rem 0;
-    padding: 1.2rem 1rem;
-    background: linear-gradient(90deg, #eaf0fa 0%, #a8dadc 100%);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 8px #23294622;
-    transition: box-shadow 0.2s, transform 0.2s;
-}
-.track-list li:hover {
-    box-shadow: 0 6px 24px #23294644;
-    transform: translateY(-2px) scale(1.01);
-}
-.track-title {
-    font-weight: 600;
-    color: #232946;
-    font-size: 1.1rem;
-}
-.audio-player {
-    width: 200px;
-    border-radius: 8px;
-    background: #eaf0fa;
-    box-shadow: 0 1px 4px #23294622;
-}
-
-/* --- Social Links --- */
-.social-links {
-    text-align: center;
-    margin-top: 2.5rem;
-}
-.social-links a {
-    color: #232946;
-    margin: 0 1.2rem;
-    text-decoration: none;
-    font-size: 2rem;
-    transition: color 0.2s, transform 0.2s;
+.album-btn {
     display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(35,41,70,0.06);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
-.social-links a:hover {
-    color: #e07a5f;
-    transform: scale(1.18) rotate(-8deg);
+.album-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.95;
+}
+.album-btn.itunes { background: #1a8db4; color: #fff; }
+.album-btn.spotify { background: #4e9b69; color: #fff; }
+
+@media (max-width: 700px) {
+    .album {
+        padding: 0.9rem;
+    }
+    .album-cover-img {
+        max-width: 240px;
+    }
 }
 
-/* --- Footer --- */
 .footer {
     width: 100%;
-    background: rgba(35, 41, 70, 0.98);
-    color: #a8dadc;
+
+    color:#fff;
     text-align: center;
     padding: 1.2rem 0 1rem 0;
     font-size: 1rem;
-    font-family: 'Roboto', Arial, sans-serif;
+
     margin-top: 3rem;
     letter-spacing: 0.5px;
 }
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap');
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            background: linear-gradient(135deg, #232946 0%, #3d405b 50%, #a8dadc 100%);
-            color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            position: relative;
-            /* Subtle pattern overlay using SVG data URI */
-            background-image: linear-gradient(135deg, #232946 0%, #3d405b 50%, #a8dadc 100%), url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" fill="none"/><circle cx="20" cy="20" r="1.5" fill="%23e07a5f" fill-opacity="0.12"/></svg>');
-            background-size: cover, 120px 120px;
-            background-repeat: no-repeat, repeat;
-        }
 
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(168, 218, 220, 0.35); /* transparent a8dadc */
-            pointer-events: none;
-            z-index: 0;
-        }
 
-        .container, header, .music-section, .image-div, .social-links {
-            position: relative;
-            z-index: 1;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            padding: 2rem;
-            background: rgba(61, 64, 91, 0.85);
-            border-radius: 2rem;
-            box-shadow: 0 8px 32px 0 rgba(35, 41, 70, 0.18);
-            backdrop-filter: blur(8px);
-        }
-        header {
-            text-align: center;
-            padding: 1.5rem 1rem 0.5rem 1rem;
-        }
-        .image-div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto 2rem auto;
-        }
-        .image-div img {
-            width: 340px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(94, 129, 172, 0.18);
-            border: 4px solid #e0eafc;
-            background: #e9eaed;
-            transition: transform 0.3s;
-        }
-        .image-div img:hover {
-            transform: scale(1.06) rotate(-2deg);
-        }
-        header h1 {
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 2.7rem;
-            margin-bottom: 0.3rem;
-            color: #e7eaf2;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 12px #232946;
-        }
-        header p {
-            font-size: 1.15rem;
-            color: #dadfe8;
-            margin-bottom: 0.5rem;
-        }
-        .music-section {
-            margin: 2rem auto 0 auto;
-            background:#a8dadc;
-            border-radius: 1.5rem;
-            box-shadow: 0 2px 16px rgba(110, 128, 222, 0.1);
-            padding: 2rem 1.5rem 1.5rem 1.5rem;
-        }
-        .music-section h2 {
-            margin-top: 0;
-            color: #f7f7f7;
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 1.6rem;
-            letter-spacing: 0.5px;
-        }
-        .track-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .track-list li {
-            margin: 1.2rem 0;
-            padding: 1.2rem 1rem;
-            background: linear-gradient(90deg, #3d405b 0%, #3d405b 100%);
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 8px #23294633;
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-        .track-list li:hover {
-            box-shadow: 0 6px 24px #23294666;
-            transform: translateY(-2px) scale(1.01);
-        }
-        .track-title {
-            font-weight: 500;
-            color: #f7f7f7;
-            font-size: 1.1rem;
-        }
-        .audio-player {
-            width: 200px;
-            border-radius: 8px;
-            background: #a3b8e6;
-            box-shadow: 0 1px 4px #23294622;
-        }
-        .social-links {
-            text-align: center;
-            margin-top: 2.5rem;
-        }
-        .social-links a {
-            color: #a3b8e6;
-            margin: 0 1.2rem;
-            text-decoration: none;
-            font-size: 2rem;
-            transition: color 0.2s, transform 0.2s;
-            display: inline-block;
-        }
-        .social-links a:hover {
-            color: #f7f7f7;
-            transform: scale(1.18) rotate(-8deg);
-        }
-        @media (max-width: 700px) {
-            .container {
-                padding: 1rem;
-            }
-            .music-section {
-                padding: 1rem 0.5rem 1rem 0.5rem;
-            }
-            .audio-player {
-                width: 120px;
-            }
-        }
+@media (max-width: 600px) {
+    .audio-cover {
+        width: 90px;
+        height: 90px;
+    }
+    .audio-section .audio-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* Track list inside audio card */
+.audio-tracks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.6rem;
+}
+.audio-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.track-label {
+    flex: 0 0 auto;
+    color: #232946;
+    font-weight: 600;
+    max-width: 28%;
+    font-size: 0.98rem;
+}
+.audio-track audio {
+    flex: 1 1 auto;
+    max-width: 72%;
+}
+
+
+@media (max-width: 700px) {
+    .audio-track {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .track-label {
+        max-width: 100%;
+        margin-bottom: 0.35rem;
+    }
+    .audio-track audio {
+        max-width: 100%;
+    }
+}
+
+.audio-section audio,
+.audio-player {
+    width: 100%;
+    max-width: 740px; /* allow audio controls to be longer inside wider layouts */
+    display: block;
+    margin: 0.2rem auto 0 auto;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.65);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18) inset;
+    overflow: hidden;
+}
+
+.audio-section audio:focus,
+.audio-player:focus {
+    outline: 2px solid rgba(168,218,220,0.9);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .audio-section {
+        padding: 0.6rem 0.8rem;
+    }
+    .audio-section audio,
+    .audio-player {
+        max-width: 100%;
+    }
+}
+
+/* --- Play/pause button styles --- */
+.audio-play-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #e07a5f 0%, #d96645 100%);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(224,122,95,0.28);
+    transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.14s ease;
+}
+.audio-play-btn:hover {
+    transform: translateY(-3px) scale(1.04) rotate(-3deg);
+    box-shadow: 0 10px 26px rgba(224,122,95,0.32);
+}
+.audio-play-btn:active {
+    transform: scale(0.98);
+    opacity: 0.95;
+}
+
+.audio-play-btn .icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.gallery-section {
+    text-align: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* L-shape layout */
+.image-grid img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: 300px;
+}
+
+.image-grid img:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 300px;
+}
+
+.image-grid img:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+
+/* Make it responsive */
+@media (max-width: 600px) {
+    .image-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-grid img {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+/* --- Header spacing tweaks: move title and paragraph up --- */
+header {
+    /* reduce top padding so the header sits higher on the page */
+    padding-top: 0.6rem; /* was larger in some rules */
+    padding-bottom: 0.25rem;
+}
+header h1 {
+    margin-top: -0.4rem; /* pull title up slightly */
+    margin-bottom: 0.25rem;
+}
+header p {
+    margin-top: -0.2rem; /* pull subtitle up a touch */
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding-top: 0.4rem;
+    }
+    header h1 {
+        margin-top: -0.2rem;
+        font-size: 2rem;
+    }
+}
+
+/* --- Contact form card styles --- */
+.contact-card {
+    max-width: 720px;
+    margin: 2.2rem auto;
+    background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,250,252,0.96));
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(35,41,70,0.08);
+    border: 1px solid rgba(35,41,70,0.06);
+    color: #232946;
+}
+.contact-card h2 {
+    margin-bottom: 0.25rem;
+    font-size: 1.6rem;
+    color: #232946;
+}
+.contact-card .lead {
+    margin-bottom: 1rem;
+    color: #4f5d75;
+}
+.contact-form p {
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    color: #232946;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #dfe6ee;
+    background: #fff;
+    color: #232946;
+    font-size: 0.98rem;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.03);
+}
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+.form-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn.btn-contact {
+    background: linear-gradient(180deg, #d96645, #e07a5f);
+    color: #fff;
+    padding: 0.7rem 1.05rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(224,122,95,0.14);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn.btn-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(224,122,95,0.18);
+}
+
+@media (max-width: 700px) {
+    .contact-card { padding: 1rem; margin: 1rem; }
+    .form-actions { justify-content: center; }
+}
