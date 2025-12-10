@@ -19,9 +19,9 @@
 body {
     
     background-image: url('/static/guitarhands.jpeg');
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     background-attachment: fixed;
     padding: 20px;
     background-size: 85% 110%;
