@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarContainer = document.querySelector('.navbar-container');
     const navbarLinks = document.querySelector('.navbar-links');
 
-    // Create hamburger button
-    const hamburger = document.createElement('button');
-    hamburger.className = 'navbar-hamburger';
-    hamburger.setAttribute('aria-label', 'Open navigation menu');
-    hamburger.innerHTML = '<span></span><span></span><span></span>';
-    navbarContainer.insertBefore(hamburger, navbarLinks);
+    // Create hamburger button if not present
+    let hamburger = document.querySelector('.navbar-hamburger');
+    if (!hamburger) {
+        hamburger = document.createElement('button');
+        hamburger.className = 'navbar-hamburger';
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
+        hamburger.innerHTML = '<span></span><span></span><span></span>';
+        navbarContainer.insertBefore(hamburger, navbarLinks);
+    }
 
     // Toggle nav links on click
     hamburger.addEventListener('click', function() {

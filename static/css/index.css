@@ -80,6 +80,7 @@
 body {
     
     background-image: url('/static/meguitar.jpeg');
+    color: antiquewhite;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
