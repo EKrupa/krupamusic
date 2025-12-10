@@ -21,7 +21,7 @@ body {
     background-image: url('/static/meguitar.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
     padding: 20px;
     
