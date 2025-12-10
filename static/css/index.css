@@ -18,8 +18,7 @@
 
 body {
     
-    background-image: url("{% static 'guitarhands.jpeg' %}");
-    background-color: #64cdf0;
+    background-image: url('/static/guitarhands.jpeg');
     background-size: cover;
     background-attachment: fixed;
     padding: 20px;
