@@ -155,13 +155,19 @@ main {
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: 2.5px;
-    color: #fff;
-    margin-bottom: 0.3rem;
-    background: none;
-    text-shadow: 0 2px 16px rgba(35,41,70,0.45), 0 1px 0 #232946;
-    position: relative;
-    left: 0;
-    top: 0;
+        color: #fff;
+        margin-bottom: 0.3rem;
+        background: linear-gradient(90deg, #e07a5f 0%, #64cdf0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 4px 24px rgba(35,41,70,0.65), 0 1px 0 #232946;
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: center;
+        padding: 0.2em 0.5em;
+        border-radius: 0.5em;
 }
 
 .mepic img {
@@ -329,17 +335,29 @@ main {
     line-height: 1.5;
     margin-top: 0.8rem;
 }
-.album-cover-div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+
+
+.sub-title {
+    font-size: 1.45rem;
+    color: #f7f7f7;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
+    margin-top: 0.3rem;
+    text-align: center;
+    text-shadow: 0 2px 12px #232946cc, 0 1px 0 #232946;
+    background: rgba(35,41,70,0.18);
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+    display: inline-block;
 .album-cover-img {
     width: 100%;
     max-width: 320px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(35,41,70,0.08);
+}
 }
 .album-links {
     display: flex;
