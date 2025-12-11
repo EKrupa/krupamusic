@@ -80,7 +80,7 @@
 body {
     
     background-image: url('/static/meguitar.jpeg');
-    color: antiquewhite;
+    color: rgb(11, 58, 210);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -227,10 +227,14 @@ main {
 
 .audio-section .audio-title {
     font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     color: #d96645;
-    letter-spacing: 0.6px;
-    font-size: 1rem;
+    letter-spacing: 0.8px;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    word-break: break-word;
+    text-align: left;
+    margin-bottom: 0.2em;
 }
 
 /* Album cover and header layout inside audio card */
