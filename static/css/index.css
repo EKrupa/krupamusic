@@ -79,6 +79,7 @@
 
 body {
     
+    background-color: #232946;
     background-image: url('/static/meguitar.jpeg');
     color: rgb(11, 58, 210);
     background-repeat: no-repeat;
@@ -226,7 +227,7 @@ main {
 }
 
 .audio-section .audio-title {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Raleway', 'Quicksand', sans-serif;
     font-weight: 800;
     color: #d96645;
     letter-spacing: 0.8px;
