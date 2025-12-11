@@ -331,6 +331,8 @@ main {
 }
 .album {
     background: #fff;
+    position: relative;
+    z-index: 2;
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 8px 28px rgba(35,41,70,0.06);
@@ -616,6 +618,8 @@ header p {
     max-width: 720px;
     margin: 2.2rem auto;
     background: #fff;
+    position: relative;
+    z-index: 2;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 14px 40px rgba(35,41,70,0.08);
