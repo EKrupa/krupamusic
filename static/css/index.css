@@ -1,3 +1,27 @@
+/* --- Hero Card Styles --- */
+.hero-card {
+    max-width: 520px;
+    margin: 2.5rem auto 2.2rem auto;
+    background: linear-gradient(120deg, rgba(35,41,70,0.92) 60%, rgba(61,64,91,0.88) 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px #23294633, 0 1.5px 0 #e07a5f;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border: 2.5px solid #e07a5f;
+    backdrop-filter: blur(2px);
+}
+.hero-card .title {
+    margin: 0;
+    padding: 0;
+}
+.hero-card .hero-title {
+    margin-bottom: 0.7rem;
+}
+.hero-card .sub-title {
+    margin-top: 0.2rem;
+}
 /* --- Hamburger Menu Styles --- */
 .navbar-hamburger {
     display: none;
